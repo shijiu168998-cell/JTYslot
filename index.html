@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<link rel="stylesheet" href="../slot/style.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JTY Slots Platform</title>
+  <style>
+    /* 🎨 全局风格 */
+    :root {
+      --bg: #0a0114;
+      --purple: #9c27ff;
+      --gold: #ffd700;
+      --text: #fff;
+      --gray: #888;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", sans-serif;
+      background: radial-gradient(circle at top, #1a0033, #000);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* 🌐 顶部导航 */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5%;
+      background: rgba(10, 0, 20, 0.9);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px var(--purple);
+    }
+
+    .user-area {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .user-area span {
+      font-size: 0.9rem;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, var(--purple), var(--gold));
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+      transform: scale(1.05);
+    }
+
+    /* 🌍 多语言切换 */
+    .lang {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      border-radius: 6px;
+      padding: 6px;
+    }
+
+    /* 🎞️ Banner */
+    .banner {
+      margin-top: 10px;
+      background: url("https://images.unsplash.com/photo-1615312206496-60b1f2a4a5f2?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+      height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-shadow: 0 0 10px #000;
+    }
+
+    /* 🎮 游戏分类 */
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      padding: 30px 10%;
+    }
+
+    .game-card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      text-align: center;
+      padding: 20px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .game-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px var(--purple);
+    }
+
+    .game-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .game-card h3 {
+      margin: 10px 0 0;
+      font-size: 1rem;
+    }
+
+    /* 💬 帮助与客服 */
+    footer {
+      background: #100022;
+      padding: 20px 5%;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--gray);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    /* 📱 响应式 */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .banner {
+        font-size: 1.4rem;
+        height: 180px;
+      }
+
+      .games {
+        padding: 20px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">🎰 JTY Slots</div>
+    <div class="user-area">
+      <span> Welcome </span>
+      <p>   JTY Slots</p>
+      <button class="btn">Login</button>
+      <button class="btn">Sign Up</button>
+      <select class="lang">
+        <option>中文</option>
+        <option>English</option>
+        <option>မြန်မာ</option>
+      </select>
+    </div>
+  </header>
+
+  <div class="banner">💎 立即加入JTY Slots</div>
+
+  <section class="games">
+    <div class="game-card">
+      <img src="../slot/images/pg.png" alt="PG Soft" />
+      <h3>PG Soft</h3>
+    </div>
+    <div class="game-card">
+      <img src="../slot/images/slot2.png" alt="Pragmatic Play" />
+      <h3>Pragmatic</h3>
+    </div>
+    <div class="game-card">
+      <img src="../slot/images/Slot.jpg" alt="JILI" />
+      <h3>JILI Slots</h3>
+    </div>
+    <div class="game-card">
+      <img src="../slot/images/slot1.png" alt="CQ9" />
+      <h3>CQ9 Gaming</h3>
+    </div>
+  </section>
+
+  <footer>
+    <a href="jiutian395@gamil.com">帮助中心</a> |
+    <a href="@jiutian19_97">联系客服</a> |
+    <a href="#">关于我们</a>
+    <p style="margin-top:10px;">© 2025 JTY Slots Entertainment. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
